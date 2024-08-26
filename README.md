@@ -12,6 +12,32 @@
 - **Permissions and Commands**: Manage hearts through easy-to-use commands with permission-based access.
 - **Efficient and Modular Code**: The plugin is designed with efficiency in mind, ensuring minimal impact on server performance.
 
+## Hearts and How to Obtain Them
+
+### 1. Flame Heart
+- **Ability**: Grants infinite fire resistance and the ability to shoot fireballs.
+- **How to Obtain**: Survive in lava for 1 minute.
+
+### 2. Locked Heart
+- **Ability**: Grants Resistance for 30 seconds; the effect persists through death.
+- **How to Obtain**: Achieve the 'How did we get here' advancement.
+
+### 3. Strength Heart
+- **Ability**: Grants infinite Strength II and the ability grants Strength III for 60 seconds.
+- **How to Obtain**: Splash 10 Strength II potions within a certain time.
+
+### 4. Void Heart
+- **Ability**: Allows teleporting up to 3 players to the void for 30 seconds using `/voidtp <Player>`.
+- **How to Obtain**: Craft using a dragon egg in the middle of a 3x3 crafting table, with Nether stars on the sides of the middle row.
+
+### 5. Xray Heart
+- **Ability**: Allows players to see others within 25 blocks (glowing effect).
+- **How to Obtain**: Stand in the middle of 5 players within a 5x5 area.
+
+### 6. Water Heart
+- **Ability**: Doubles swim speed and grants infinite water breathing.
+- **How to Obtain**: Drown 3 times in a row within 3 minutes (1 minute per death).
+
 ## Commands
 
 ### `/heart setheart <Player> <Heart>`
