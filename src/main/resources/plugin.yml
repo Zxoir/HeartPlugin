@@ -1,0 +1,18 @@
+name: Shadowgod8s
+version: '1.0'
+main: me.zxoir.shadowgod8s.Shadowgod8s
+api-version: '1.20'
+author: "Zxoir"
+website: "https://www.fiverr.com/devzxoir/make-your-minecraft-plugin"
+description: "Custom Hearts Plugin"
+commands:
+  heart:
+    description: Manage hearts
+    usage: /<command> <setHeart/giveHeartItem/reload>
+  voidtp:
+    description: Teleports players to the void
+    usage: /<command> <player>
+permissions:
+  "shadowgod8s.heart":
+    description: "Permission to use the heart command"
+    default: op

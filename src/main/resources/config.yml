@@ -1,0 +1,214 @@
+# Configuration file for Custom Hearts Plugin
+
+# Heart Settings
+hearts:
+  # Obtain a player's custom heart when you slay them
+  steal-heart: true
+
+  # If it's possible to drop the heart item
+  droppable-heart: true
+
+  # If it's possible for the heart item to despawn
+  despawnable-heart: false
+
+  # If the player's inventory is full when they kill another player, the custom heart will drop on the ground instead of being added to their inventory.
+  drop-heart: true
+
+  # Cooldown on absorbing hearts
+  absorb-heart-cooldown: 60
+
+  # When absorbing a new heart, the old heart item is given back to the player
+  give-old-heart-item: true
+
+  heart-Sword:
+    enabled: true
+    unbreakable: false
+    droppable: false # If it's possible for players to drop the sword
+    despawnable: false # If it's possible for the item to despawn if dropped
+    material: "DIAMOND_SWORD" # Material of the item
+    name: "&0&bHeart Sword" # Name of the sword
+    lore: # Lore of the sword
+      - "&7If you &8kill &7a player with this sword"
+      - "&7they will be &8banned &7off the server!"
+    enchants: # Enchants on the item (Format: Enchant@EnchantLevel)
+      - "sharpness@5"
+    kill-commands: # These commands will execute after a player has been killed using the sword
+    - "ban %killed_name% You have been killed by %player_name%!"
+
+  flame-heart:
+    enabled: true
+    ability-cooldown: 5 # Ability cooldown (in seconds)
+
+    # Item Settings
+    item:
+      material: "NETHER_STAR"  # Default item material
+      name: "&cFlame Heart"  # Customizable name
+      lore:  # Customizable lore with default values
+        - "&7Grants &cinfinite fire resistance&7."
+        - "&7Ability to &cshoot fireballs&7."
+      enchanted: true  # Whether the item should appear enchanted
+
+    # Obtain Conditions
+    lava-survival-time: 60  # Time (in seconds) a player must survive in lava
+
+    # Action Bar Settings
+    action-bar:
+      text: "&cFlame Heart"  # Customizable Action Bar text
+      active-text: "(Ready to be activated)" # Active text
+      cooldown-text: "(You may use this again in %cooldown%)"  # Cooldown text
+
+  locked-heart:
+    enabled: true
+    ability-cooldown: 600 # Ability cooldown (in seconds)
+
+    # Item Settings
+    item:
+      material: "NETHER_STAR"
+      name: "&6Locked Heart"
+      lore:
+        - "&7Provides &6Resistance for 30 seconds&7."
+        - "&7Effect persists through death."
+      enchanted: true
+
+    # Obtain Conditions
+    effects:
+      resistance-level: 1
+      resistance-duration: 30
+    required-achievement: "minecraft:nether/all_effects"  # Achievement to obtain the heart
+
+    # Action Bar Settings
+    action-bar:
+      text: "&6Locked Heart"
+      active-text: "(Ready to be activated)" # Active text
+      cooldown-text: "(You may use this again in %cooldown%)" # Cooldown text
+
+  xray-heart:
+    enabled: true
+    glow-color: "AQUA"
+    obtain-cooldown: 1800 # Cooldown to obtain another xray heart (in seconds)
+
+    # Item Settings
+    item:
+      material: "NETHER_STAR"
+      name: "&eXray Heart"
+      lore:
+        - "&7Allows you to &esee players within 25 blocks&7."
+        - "&7They will be &eglowing&7."
+      enchanted: true
+
+    # Obtain Conditions
+    effects:
+      xray-visibility: 25
+
+    # Action Bar Settings
+    action-bar:
+      text: "&eXray Heart" # Active text
+
+  strength-heart:
+    enabled: true
+    ability-cooldown: 600 # Ability cooldown (in seconds)
+
+    # Item Settings
+    item:
+      material: "NETHER_STAR"
+      name: "&4Strength Heart"
+      lore:
+        - "&7Grants &4infinite Strength II&7."
+      enchanted: true
+
+    # Obtain Conditions
+    effects:
+      strength-level: 2 # Strength level
+      ability-strength-level: 3 # Ability Strength level
+      ability-strength-duration: 60 # Ability strength duration (in seconds)
+
+    splash-pots-required: 10  # Number of potions to splash
+    splash-pots-duration: 60  # Time (in seconds) to splash the potions
+
+    # Action Bar Settings
+    action-bar:
+      text: "&4Strength Heart" # Active text
+      active-text: "(Ready to be activated)" # Active text
+      cooldown-text: "(You may use this again in %cooldown%)" # Cooldown text
+
+  water-heart:
+    enabled: true
+
+    # Item Settings
+    item:
+      material: "NETHER_STAR"
+      name: "&bWater Heart"
+      lore:
+        - "&7Doubles swim speed and grants"
+        - "&7&binfinite water breathing&7."
+      enchanted: true
+
+    # Obtain Conditions
+    effects:
+      swim-speed: 2  # Swimming speed multiplier
+      water-breathing: true  # Infinite water breathing
+    drown-tries: 3  # Number of times to drown
+    drown-time-limit: 60  # Time (in seconds) to drown
+
+    # Action Bar Settings
+    action-bar:
+      text: "&bWater Heart" # Active text
+
+  void-heart:
+    enabled: true
+    ability-cooldown: 600 # Ability cooldown (in seconds)
+
+    # Item Settings
+    item:
+      material: "NETHER_STAR"
+      name: "&8Void Heart"
+      lore:
+        - "&7Teleport up to &83 players to the void&7."
+        - "&7Effect lasts for 30 seconds."
+      enchanted: true
+
+    # Obtain Conditions
+    effects:
+      void-teleport-limit: 3  # Number of players that can be teleported
+      void-teleport-duration: 30  # Duration (in seconds) till the effect disappears
+
+    recipe:
+      top:
+        - ""
+        - ""
+        - ""
+      middle:
+        - "NETHER_STAR"
+        - "DRAGON_EGG"
+        - "NETHER_STAR"
+      bottom:
+        - ""
+        - ""
+        - ""
+
+    # Action Bar Settings
+    action-bar:
+      text: "&8Void Heart"
+      active-text: "(Ready to be activated)" # Active text
+      actived-text: "(Ability ending in %remaining_time%)" # Activated text
+      cooldown-text: "(You may use this again in %cooldown%)"  # Cooldown text
+
+# Messages
+messages:
+  no-permission: "&cYou don't have permission to use this command"
+  no-heart: "&cYou do not have a heart equipped"
+  heart-obtained: "&aYou have obtained a new heart"
+  heart-lost: "&cYou have lost your heart"
+  heart-item-dropped: "&cYour inventory is full! %killed%'s heart has been dropped"
+  absorb-heart: "&aYou have absorbed a &l%heart_name% &aHeart"
+  absorb-same-heart-error: "&cYou already have that heard activated"
+  absorb-heart-cooldown: "&cYou must wait &l%cooldown% &cbefore absorbing another heart"
+  xray-heart-cooldown: "&cYou can get another Xray Heart in &l%cooldown%"
+  void-tp-no-void-heart: "&cYou must have the &8Void Heart &cto use this command"
+  void-tp-incorrect-usage: "&cUsage: /voidtp <Player>"
+  void-tp-player-not-found: "&cPlayer not found"
+  void-tp-kill-self: "&cYou can't send yourself to the void"
+  void-tp-no-charges: "&cYou can't use this yet"
+  void-tp-kill-killer-message: "&aYou have sent &l%player_name% &ato the void"
+  void-tp-kill-victim-message: "&cYou have been sent to the void by &l%player_name%"
+  void-tp-kill-announce: "&9&l%killer_name% &9has sent &l%player_name% &9to the void"
